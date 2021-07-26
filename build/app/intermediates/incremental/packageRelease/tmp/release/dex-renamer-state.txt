@@ -1,0 +1,4 @@
+#Mon Jul 26 14:55:57 SGT 2021
+base.0=D\:\\Software-2\\ios-development\\iosflutter\\www\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
