@@ -1,0 +1,76 @@
+workflows:
+  ios-workflow:
+    name: ELC
+    # instance_type: mac_mini
+    max_build_duration: 120
+    environment:
+      vars:
+        XCODE_WORKSPACE: "Runner.xcworkspace"
+        XCODE_SCHEME: "Runner"                
+        # https://docs.codemagic.io/code-signing-yaml/signing-ios/
+        APP_STORE_CONNECT_ISSUER_ID: Encrypted(Z0FBQUFBQmctVGxNeFJtQ0hCSU1NcGlnTjk1OFBMZWhTb1NUQVhuREE1c1ZRS09zRHhjY1U3bFp0dlBNdFpORURQZVpKbUdDdU42UjFGZGtmQ0NGTVM2UDgwckNMTkZlTVlPeUpMWlVPaml6RzhYZElVWFlPMmliYXJKclJnVGFNYzMxYldpUEw0RVc=) # <-- Put your encrypted App Store Connect Issuer Id here 
+        APP_STORE_CONNECT_KEY_IDENTIFIER: Encrypted(Z0FBQUFBQmctVG04Q3MtWG8wbDFJa1V1alAzbC1pX2thTGxpbXJoemhBS1lFVFV3UzZfY2NGUllBb09TRzNFd01JVnNWNWVfb3BaMnNCUzNrc243S0tIVUdrcy00dWZJcVE9PQ==) # <-- Put your encrypted App Store Connect Key Identifier here 
+        APP_STORE_CONNECT_PRIVATE_KEY: Encrypted(Z0FBQUFBQmctVG42ZmhOXzQtMVhveEdXNnpMaFI4NjN5WVl0blQwNDJ6azRMOE05ODhJbHlZT1FhNFRnNjgxNlppNEFtaURtbGVKT0RuWlF0WU1ydW9jQklZSU53aDBWQ1Y2TE9VVmcwSzZUT2VyckV6TGE0blo3X2gtbGgxajVKNGhEbWNtX25id2VncEJBaFpPaGlHYXprQ1RUbnZzY1FpSF9oTmxULUJhQWNoWkdPa0JuYW9nYWFxZS1iVWdIVXVBRjVtbktVLUJFUUxJdUlfcFhSU2Z1d3ZZSS1JNktsdDNDX253RFAzTzAyX1dyZkZhclhMVDVvbDI1cnkxU3NqYlRqRGtOcEdDbnVzLXNuQy15ZVpGNEdsRU9NNFd3OXQ5VE13SVhUY2cwdkJybWoyTC00Wkp5WXRxdW9wek8xQ3dvZmpkYWtFb29TcEhHZnBwWHlZdGFndEltaVNHMndyX1pFNUp4SDAxekJiTnVObnQxUW1GNmFyd1U4X2VZNjQ5TjdTX2ZQUHc5SUlJZEc2REF5VlZlamduNUFQTXVDdXNLRGtGOWs2MFpwMWFZbURISy02bz0=) # <-- Put your encrypted App Store Connect Private Key here 
+        CERTIFICATE_PRIVATE_KEY: Encrypted(Z0FBQUFBQmctVUFYc3FtZ0VEbmQ1ZFoxTk91TWpTV0tKX1VkZ0E0eVBKNF84SnRCSE5MYXFpd1ktNkdZR3czWjhjR2pUVW9WS3hKUHEzWGRzOU5ka2hHV2gycTRGRTF2SGNqa1pFaTVfQ1dOMEtwVFBIMWQ3ZWNJZTF4UUhzMkZSUEhGcFFzRlpFbWxrSWNGMFl3Nk5GQ3JwS1QwZHVzQzkwQmIxV2tlamxJQnlLUDdxWFlXaW5ISG9HOUpUd1hBWjFLNHVKaXpRUEZ3NW04ZEtOSjVUMUJvT1lXVERJc0N6eTZLTVJoUzFWaWZuS1BmQmItUmF4eUwxR2lEUDh1VVB4OFh0N0hKNExZTHdnem9yeWdxakdMOHhvaWpuVUtITWRmbEpSdi1vRnBWU0g3QTNlU3lEM21pbEg4SzRxeV8zRVpLc0hGREtTLThhTFRwa1hRSDBteWNRY0pKUEpUdGR0VlFCanZHZ2dfdU4yaWhQZ1ZfRjM5YndRcjY5OW1ibVFlZXdpWnBBZjh4RTgzbVpBV083RzNZaWJvdjlnTHprS1gxa3pTOTNEaFVURkZ2Vjl4NWF4Ymt6blZNLVNobVFpS2ZjSkFIYXNWNUkxd2RZRmZBLWd0VXRJZ2FrRVFKTHNTMlBUcEdhYVJ2dlN5bzlGcGs3YVJsOERGTG1aZUFhUHZweElkZ0k0YV9iX09LdU91b05yQ002QWM2OU00NmV6c2J0SWtmSlktVm5ka3BZQndQQlJlMXBZWFdsNE1rUWZ3SUdrVXFBRHh3a3ZKYTdxM1ppTmM1UnQ2WC1mLVREOXN3RWZaU190N0dmSDJPQVBPREJHT0FILXN6a0xhZjJ4M3dyVXB5XzVreTRfS1RiNWl4NXZ3eWROYkpJcTBwUVNoRzN6bG5ONXg1MkdERWhrRmZGZFhwNDgwa0xKNEZZbmVzdWlFWkM2ajhCZHpUV1ZGOE5uZFp5cWdBcm5GdDV6Zm9SaXU5QUFGdDJRRFN3cVNzb3h4MXNtR2l4Zmsxa2Q3MTlMLUhJMkxFTGFxeFBpZ0kxQVNHS3FOb0ZlQ3pjcWtlUkdEb0prVmNsSUFtMHU0Ry01M1dSMG9QLW9oc2JHMEtpaGdYMkJ5VGRjTUlhaER3eW9KRm5sbGYyWkRqS0FKNDZtZFl1dzBST3hvZmxyeDEwbjEyWFgyQVBnWVFNbjgzQlZFdURiRGtsbVdJRk45Q3VlSGdyMVRFblpZbXFHeDdJanFuU091Z2FMbmtLUHBHXzM2RmZxXzVOSjVWaU9YTUxzbVRnWjBMMWhXc0ZWRmF5RzNLXzBxOGF3cGREUXdscFUybHpScU5zQUtpSVpsR2djSXBTc21NdUp1emoyU0IzbjBCbnE5ODBnblZqTTBoZ0hXVFFJaHY3SzZaRXR2elJza1R3dTZQcTBRdXR0dGo3WjBBdTNOR0t4eWFRNEgwZnVYSUo1eWtZdGdvcVU0V2VCR0VVNFVIYm03SmtzMXdtWE1JaUNHQ084UnB2QnFxY3ptaXJDUHFPaWxvdXZYaTdWNEYyNDNqMk1Ed29iakJzTGIweWFtLUpOVThTZmwxc3NPNVJCLXlSU3NQbzg2Z3ZaMDltOVdVTHB6elFMdlJKa2hwQzBNYUpZVVlqNG9QeW5DbUtXQkFwSjlyWjNMZU13MkFrMDBiTmEzWFNVMGdLMS1TbTFDVXRhQ2hGRlZHZUZzWDl4OVQtZUdZTUpKQ0Y3Yml5VHBvMk1lV09GaXduX0ZDTUZFSmxPYmdNTnM5M1AzX3FENXRiXzBJRVNTdzhUcExNbi1UXzBXaUo4SVVkQlRqQUVfbUJuTWJZZ1RQYmpWUlVTb1VzdXpFVURZVnpTOHhxeWJHVmp4eXhkVW05NmVYXy0wbHVUWXRlZTdUM0lZcFdjSlluTmd2bWlMMC1sTjYtcF9XekVrUFFVLWNZX2JxSlo5eGZLS2htZHU5bWhBUGdGaFlrTmNtQzRRaWd0c3VuSnlTQ2F3TV9naWdERzRxaFc0YW1mbkNNNVh0WWIxRS1kWTJ1RmJSeFhtYUlsRnZKX0M4QnFfT3pqNHMzcV9rQXlOT1FqMURfTU56cUF2Vi1TTTRwTVd1X3liQnl0X1dYcVhIU1pxWG5rMXdlamtHcHI0MGY5NktrRlhSTzNnZzVDMkpKSXE0QldxaENYdlVqTTFHYWJuLXpnb21Vdjl3c1FFdTY1dzV3Rmkyd3Zmd2NxZ3MyMGtPb05HeHpLdmY2aDdGTVdPV1RTczhVbDF6NkUzOEJJZHI2b1FLc1k1Z1VHX19UVXpqYjJwNmc5N0ZZdEtoaGhKOUZoYmhWbUZsdUdERUFFUWswVkt1YUwzWUdGaHliM1Z5U3VwOWRzTGF1dDZxeVhINVJTalZQbTN5cVhVUFFmVjlKRkk0SlhXR0Z0cW9XX243RDlqb2tRb1hGeERXcXRYMm83N2JjM3Rnb0tDa0RNaVlvU3NXZWI2d3BBeUg1aFV3NFoyV3VJRDZRWXRsWVlKV2tsS0VYQ2V0Vl8zQ0FVejVuNnRodU0zRDlrdXpSNnhQd1I1a0F1VjNlR3dIbFJIdFpYRnFqYTlIbElEVi1KV20zMmgtZUQwVFpLWEZyZXF0dk5CYVFteGQ5aXVoNk8tUWtHWjBacDc1OUNqanpaUkxWcXBxMnlPTEdMbUZBQkg1YkhoZlMxdVJpTmp6aUc3YzhpcHIyUHg0VTBET2Z0Ym5laXNPSUFLNTF2ZFlFQzVDcmp0SGlzWmtBbmIzZUY5ZjRGZFRaZnJ1LW5SbFM5WGhoTjhxaDBXSHQwckk5UVdzRDh6TmxDdXp2d3YyQnYyVE9fdWFVNmVrb2ViZkNaa1hoalRLdmdxU1EzeVFmVlJCOWQ1YjdFUWI2ckdGYTBFa2RGeWV6QUUxZDVsbk13UzkySU5uUld2LWozV3lta1ZmUGVTVlFERkRGelBJTENqQ3pUQUpaeDJFeGtzR3VMYlZGM2hIU2RmUUVSVUN0VF9GdnhfR2lVdk8tX0JoeEE3Ukt2NzdBYmR2MUZPeHdUcHNXWjkzVXV0NENjNjYxZ1VlMUFoal9CcmlZQTZC) # <-- Put your encrypted Certificate Private Key here 
+        APPLE_ID: Encrypted(Z0FBQUFBQmctVWdFa3FXRVE4Wm8yN29pck1hV1FXbzU3UmphWXZzM3luN1I1dktQbEw1Mkp4VlNlbEhXX2duS0hfaUx3VlZTMmdEY0RrdFpWdU02TmxlSDB6M2ZCdmEzOHJMUUdMMDZ0UDB6R0MzNlBLTlNjd2M9) # <-- Put your encrypted Apple Id email address here
+        APP_SPECIFIC_PASSWORD: Encrypted(Z0FBQUFBQmctVGZiNkZoZTA3UFpfUll3clRLUlctejNJd2NabVl2aVNTVUgzOVlYSTM0S3JMZWEyZ1g5aldUYVdBTFFfVEpFNDZxblFrY1JpWGJ1TVM0RXB6dlFyX1ZCVXh0YXdXenZESmYtX2RBR183amQta3M9) # <-- Put your encrypted App Specific password here. See here for more information - https://support.apple.com/en-us/HT204397
+        BUNDLE_ID: "com.elcedu.www" # <-- Put your bundle id here
+        APP_STORE_ID: 1577666307 # <-- Use the TestFlight Apple id number (An automatically generated ID assigned to your app) found under General > App Information > Apple ID. 
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+    scripts:
+      - name: Set up keychain to be used for codesigning using Codemagic CLI 'keychain' command
+        script: |
+          keychain initialize
+      - name: Fetch signing files
+        script: |
+          app-store-connect fetch-signing-files $BUNDLE_ID --type IOS_APP_STORE --create
+      - name: Use system default keychain
+        script: |
+          keychain add-certificates
+      - name: Set up code signing settings on Xcode project
+        script: |
+          xcode-project use-profiles
+      - name: Get Flutter packages
+        script: |
+          cd . && flutter packages pub get
+      - name: Flutter analyze
+        script: |
+          cd . && flutter analyze
+      - name: Flutter unit tests
+        script: |
+          cd . && flutter test
+        ignore_failure: true          
+      - name: Install pods
+        script: |
+          find . -name "Podfile" -execdir pod install \;
+      - name: Flutter build ipa and automatic versioning
+        script: |
+          flutter build ipa --release \
+          --build-name=1.0.0 \
+          --build-number=$(($(app-store-connect get-latest-testflight-build-number "$APP_STORE_ID") + 1)) \
+          --export-options-plist=/Users/builder/export_options.plist
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+      - flutter_drive.log
+    publishing:
+      # See the following link for details about email publishing - https://docs.codemagic.io/publishing-yaml/distribution/#email
+      email:
+        recipients:
+          - grasia.meliolla@gmail.com
+          
+        notify:
+          success: true     # To receive a notification when a build succeeds
+          failure: false    # To not receive a notification when a build fails
+      slack: 
+        # See the following link about how to connect your Slack account - https://docs.codemagic.io/publishing-yaml/distribution/#slack
+        channel: "#builds"
+        notify_on_build_start: true   # To receive a notification when a build starts
+        notify:
+          success: true               # To receive a notification when a build succeeds
+          failure: false              # To not receive a notification when a build fails
+      app_store_connect:   # https://docs.codemagic.io/publishing-yaml/distribution              
+        apple_id: grasia.meliolla@gmail.com    
+        password: Encrypted(Z0FBQUFBQmctVGZiNkZoZTA3UFpfUll3clRLUlctejNJd2NabVl2aVNTVUgzOVlYSTM0S3JMZWEyZ1g5aldUYVdBTFFfVEpFNDZxblFrY1JpWGJ1TVM0RXB6dlFyX1ZCVXh0YXdXenZESmYtX2RBR183amQta3M9)
