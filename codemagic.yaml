@@ -35,6 +35,9 @@ workflows:
       - name: Set up code signing settings on Xcode project
         script: |
           xcode-project use-profiles
+      - name: Clean build
+        script: |
+          flutter clean
       - name: Build flutter iOS
         script: |
           flutter build ios
