@@ -13,15 +13,15 @@ workflows:
       flutter: stable
       xcode: latest
       cocoapods: default
-      triggering:
+    triggering:
       events:
-      - push
-      - tag
-      - pull_request
+        - push
+        - tag
+        - pull_request
       branch_patterns:
-      - pattern: 'develop'
-        include: true
-        source: true
+        - pattern: 'develop'
+          include: true
+          source: true
     scripts:
       - name: Set up keychain to be used for codesigning using Codemagic CLI 'keychain' command
         script: |
