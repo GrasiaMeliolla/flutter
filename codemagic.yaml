@@ -3,8 +3,8 @@ workflows:
     name: www
     environment:
       vars:
-        XCODE_WORKSPACE: "ios/Runner.xcworkspace"
-        XCODE_SCHEME: "ios/Runner"                
+        XCODE_WORKSPACE: "Runner.xcworkspace"
+        XCODE_SCHEME: "Runner"                
         BUNDLE_ID: "com.elcedu.www" # <-- Put your bundle id here
         APP_STORE_CONNECT_ISSUER_ID: Encrypted(Z0FBQUFBQmctVGxNeFJtQ0hCSU1NcGlnTjk1OFBMZWhTb1NUQVhuREE1c1ZRS09zRHhjY1U3bFp0dlBNdFpORURQZVpKbUdDdU42UjFGZGtmQ0NGTVM2UDgwckNMTkZlTVlPeUpMWlVPaml6RzhYZElVWFlPMmliYXJKclJnVGFNYzMxYldpUEw0RVc=) # <-- Put your encrypted App Store Connect Issuer Id here 
         APP_STORE_CONNECT_KEY_IDENTIFIER: Encrypted(Z0FBQUFBQmctVG04Q3MtWG8wbDFJa1V1alAzbC1pX2thTGxpbXJoemhBS1lFVFV3UzZfY2NGUllBb09TRzNFd01JVnNWNWVfb3BaMnNCUzNrc243S0tIVUdrcy00dWZJcVE9PQ==) # <-- Put your encrypted App Store Connect Key Identifier here 
