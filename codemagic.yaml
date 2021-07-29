@@ -35,6 +35,9 @@ workflows:
       - name: Set up code signing settings on Xcode project
         script: |
           xcode-project use-profiles
+          LATEST_BUILD_NUMBER=$(app-store-connect get-latest-testflight-build-number '1577666307') # The argument is your application's Apple ID
+          cd ./ios # Set working directory to iOS project directory as agvtool should run in directory with .xcodeproj file
+          agvtool new-version -all $(($LATEST_BUILD_NUMBER + 1))
       - name: Clean build
         script: |
           flutter clean
@@ -44,11 +47,8 @@ workflows:
       - name: Build ipa for distribution
         script: |
           xcode-project build-ipa --workspace "$XCODE_WORKSPACE" --scheme "$XCODE_SCHEME"
-      - name: Increment build number
-          script: |
-          LATEST_BUILD_NUMBER=$(app-store-connect get-latest-testflight-build-number '1577666307') # The argument is your application's Apple ID
-          cd ./ios # Set working directory to iOS project directory as agvtool should run in directory with .xcodeproj file
-          agvtool new-version -all $(($LATEST_BUILD_NUMBER + 1))
+
+
     artifacts:
       - build/ios/ipa/*.ipa
 
