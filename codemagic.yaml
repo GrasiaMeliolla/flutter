@@ -51,7 +51,7 @@ workflows:
       # See the following link for details about email publishing - https://docs.codemagic.io/publishing-yaml/distribution/#email
       app_store_connect:   # https://docs.codemagic.io/publishing-yaml/distribution              
         apple_id: grasia.meliolla@gmail.com    
-        password: Encrypted(Z0FBQUFBQmctVGZiNkZoZTA3UFpfUll3clRLUlctejNJd2NabVl2aVNTVUgzOVlYSTM0S3JMZWEyZ1g5aldUYVdBTFFfVEpFNDZxblFrY1JpWGJ1TVM0RXB6dlFyX1ZCVXh0YXdXenZESmYtX2RBR183amQta3M9)
+        password: Encrypted(Z0FBQUFBQmhBaExHVmRPQmNkSzZsZzVLZDhyVmtFWWtNOTZpQ3ZmZXlGd3ItdTY3N2VINEtFVTNjRnR2MDlIQlZmQzl0dUtmamtwR1RoZ1M0N0V0RC1VcENOcXJ4dm8tWjFaV0ZZZVBPUmJsV2VqYnZIRDFqWjA9)
       email:
         recipients:
           - grasia.meliolla@gmail.com
